@@ -871,7 +871,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18.05
+  m_fontSize: 16.3
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2112,7 +2112,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 800, y: 55}
+  m_CellSize: {x: 800, y: 50}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -2375,16 +2375,16 @@ RectTransform:
   m_GameObject: {fileID: 1340960199}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.18, y: 1.18, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1378580196}
+  m_Father: {fileID: 1620064006}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 785.46967, y: -192.99365}
+  m_SizeDelta: {x: 300.9071, y: 301.3491}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1340960201
 MonoBehaviour:
@@ -2541,7 +2541,7 @@ MonoBehaviour:
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
+  m_overflowMode: 3
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
@@ -2615,7 +2615,7 @@ GameObject:
   - component: {fileID: 1378580196}
   - component: {fileID: 1378580197}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Split1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2635,14 +2635,13 @@ RectTransform:
   m_Children:
   - {fileID: 902958567}
   - {fileID: 1255325512}
-  - {fileID: 1340960200}
   m_Father: {fileID: 1620064006}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.7199707, y: 49}
-  m_SizeDelta: {x: 800, y: 400}
+  m_AnchoredPosition: {x: -0.7199707, y: 20}
+  m_SizeDelta: {x: 800, y: 480}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1378580197
 MonoBehaviour:
@@ -2663,8 +2662,8 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
-  m_StartAxis: 1
-  m_CellSize: {x: 400, y: 200}
+  m_StartAxis: 0
+  m_CellSize: {x: 500, y: 320}
   m_Spacing: {x: 2, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -3185,6 +3184,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1340960200}
   - {fileID: 1378580196}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -3289,7 +3289,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 11.95
+  m_fontSize: 11
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3368,14 +3368,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33a52a56b042e14fbe8edc5a1c2eb5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Button0: {fileID: 804344702}
-  Button1: {fileID: 245251137}
-  Button2: {fileID: 1265695155}
-  Button3: {fileID: 951534169}
-  TextButton0: {fileID: 1660978142}
-  TextButton1: {fileID: 716828668}
-  TextButton2: {fileID: 743978351}
-  TextButton3: {fileID: 1555054759}
   TextButton:
   - {fileID: 1660978142}
   - {fileID: 716828668}

@@ -25,11 +25,6 @@ public class ButtonsClick : MonoBehaviour
 
 
 
-        print(TextButton[1].text);
-        print(TextButton[2].text);
-        print(TextButton[3].text);
-        print(TextButton[0].text);
-        print("TextButton[3]");
 
 
         //Calls the TaskOnClick/TaskWithParameters/ButtonClicked method when you click the Button
