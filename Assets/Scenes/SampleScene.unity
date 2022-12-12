@@ -3376,6 +3376,16 @@ MonoBehaviour:
   TextButton1: {fileID: 716828668}
   TextButton2: {fileID: 743978351}
   TextButton3: {fileID: 1555054759}
+  TextButton:
+  - {fileID: 1660978142}
+  - {fileID: 716828668}
+  - {fileID: 743978351}
+  - {fileID: 1555054759}
+  ButtonS:
+  - {fileID: 804344702}
+  - {fileID: 245251137}
+  - {fileID: 1265695155}
+  - {fileID: 951534169}
   jsonFile: {fileID: 4900000, guid: e4afb399479aa0f46affb98e62fa954d, type: 3}
 --- !u!4 &1814100210
 Transform:

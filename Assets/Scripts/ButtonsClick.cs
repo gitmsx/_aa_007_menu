@@ -9,11 +9,10 @@ using static System.Net.Mime.MediaTypeNames;
 
 public class ButtonsClick : MonoBehaviour
 {
-    //Make sure to attach these Buttons in the Inspector
-    [SerializeField] private Button Button0, Button1, Button2, Button3;
-    [SerializeField] TextMeshProUGUI TextButton0, TextButton1, TextButton2, TextButton3;
 
 
+    [SerializeField]  TextMeshProUGUI[] TextButton = new TextMeshProUGUI[4];
+    [SerializeField]  Button[] ButtonS = new Button[4];
 
 
 
@@ -23,19 +22,7 @@ public class ButtonsClick : MonoBehaviour
     void Start()
     {
 
-        TextMeshProUGUI[] TextButton = new TextMeshProUGUI[14];
-    Button[] ButtonS = new Button[14];
 
-
-    TextButton[0] = TextButton0;
-        TextButton[1] = TextButton1;
-        TextButton[2] = TextButton2;
-        TextButton[3] = TextButton3;
-
-        ButtonS[0] = Button0;
-        ButtonS[1] = Button1;
-        ButtonS[2] = Button2;
-        ButtonS[3] = Button3;
 
 
         print(TextButton[1].text);
@@ -46,10 +33,10 @@ public class ButtonsClick : MonoBehaviour
 
 
         //Calls the TaskOnClick/TaskWithParameters/ButtonClicked method when you click the Button
-        Button0.onClick.AddListener(TaskOnClick0);
-        Button1.onClick.AddListener(TaskOnClick1);
-        Button2.onClick.AddListener(delegate { TaskWithParameters("Hello"); });
-        Button3.onClick.AddListener(() => ButtonClicked(42));
+        ButtonS[0].onClick.AddListener(TaskOnClick0);
+        ButtonS[1].onClick.AddListener(TaskOnClick1);
+        ButtonS[2].onClick.AddListener(delegate { TaskWithParameters("Hello"); });
+        ButtonS[3].onClick.AddListener(() => ButtonClicked(42));
 
     }
 
@@ -58,13 +45,13 @@ public class ButtonsClick : MonoBehaviour
 
     void TaskOnClick1()
     {
-    
+        list11();    
     }
 
 
     void TaskOnClick0( )
     {
-       
+        list12();
     }
 
     void TaskWithParameters(string message)
@@ -79,7 +66,7 @@ public class ButtonsClick : MonoBehaviour
     public TextAsset jsonFile;
     public EmployeeList MyemployeeList = new EmployeeList();
 
-    public void list11(TextMeshProUGUI[] TextButton)
+    public void list11()
     {
         MyemployeeList = JsonUtility.FromJson<EmployeeList>(jsonFile.text);
         int ii = 0;
@@ -94,7 +81,7 @@ public class ButtonsClick : MonoBehaviour
             ii++;
         }
     }
-    public void list12(TextMeshProUGUI[] TextButton)
+    public void list12()
     {
         MyemployeeList = JsonUtility.FromJson<EmployeeList>(jsonFile.text);
         int ii = 0;
