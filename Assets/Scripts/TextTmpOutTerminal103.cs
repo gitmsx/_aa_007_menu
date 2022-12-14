@@ -1,11 +1,8 @@
 using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 using TMPro;
-using System;
-using System.Globalization;
-using Unity.VisualScripting;
-using UnityEngine.UIElements;
+
 
 public class TextTmpOutTerminal103: MonoBehaviour
 {
