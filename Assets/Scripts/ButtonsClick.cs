@@ -59,82 +59,65 @@ public class ButtonsClick : MonoBehaviour
 
 
     public TextAsset jsonFile;
-    public EmployeeList MyemployeeList = new EmployeeList();
+    public SceneList MyemployeeList = new SceneList();
 
     public void list11()
     {
-        MyemployeeList = JsonUtility.FromJson<EmployeeList>(jsonFile.text);
+        MyemployeeList = JsonUtility.FromJson<SceneList>(jsonFile.text);
         int ii = 0;
-        foreach (Employee e in MyemployeeList.employees)
+        foreach (Scene e in SceneList.scenes)
         {
 
-            if (ii < 4)
-            {
-                TextButton[ii].text = " firstName =" + e.firstName + " lastName " + e.lastName + " Age " + e.age.ToString();
-            }
+            TextButton[0].text = e.Button0;
+            TextButton[1].text = e.Button1;
+            TextButton[2].text = e.Button2;
+            TextButton[3].text = e.Button3;
 
             ii++;
         }
     }
-    public void list12()
-    {
-        MyemployeeList = JsonUtility.FromJson<EmployeeList>(jsonFile.text);
-        int ii = 0;
-        foreach (Employee e in MyemployeeList.employees)
-        {
 
-            if (ii < 4)
-            {
-                TextButton[ii].text = " 100 firstName =" + e.firstName + " lastName " + e.lastName + " Age " + e.age.ToString();
-            }
-
-            ii++;
-        }
-    }
 
 
     [System.Serializable]
-    public class Employee
+    public class Scene
     {
-        public string firstName;
-        public string lastName;
-        public int age;
+        public string Button1;
+        public string Button2;
+        public string Button3;
+        public string Button0;
+
+        public string Click1;
+        public string Click2;
+        public string Click3;
+        public string Click0;
+
+        public string Points1;
+        public string Points2;
+        public string Points3;
+        public string Points0;
+
 
     }
 
-    public class EmployeeList
+    public class SceneList
     {
-        public Employee[] employees;
+        public Scene[] scenes;
 
     }
-
 
     void ButtonClicked(int buttonNo)
     {
         //Output this to console when the Button3 is clicked
         Debug.Log("Button clicked = " + buttonNo);
 
-        string path = "Assets/Resources/Employees.json";
+        string path = "Assets/Resources/s001e001.json";
         if (FileExists(path))
         {
-            JsonReader2 jsonReader2 = new JsonReader2();
-            jsonReader2.list11(path);
+            JsonReader3 jsonReader3 = new JsonReader3();
+            jsonReader3.list11(path);
 
         }
-
-
-        foreach (Employee e in MyemployeeList.employees)
-        {
-            Debug.Log(e.lastName);
-            Debug.Log(e);
-            Debug.Log(e.age);
-            Debug.Log(e.firstName);
-            Debug.Log("************ 77777777777777777777777777 ********");
-
-
-        }
-
-
 
 
 
@@ -148,21 +131,10 @@ public class ButtonsClick : MonoBehaviour
 
         if (FileName == null || FileName.Length == 0)
             return false;
-        //{
-        //    throw new ArgumentNullException("FileName");
-        //}
-
-        // Check to see if the file exists.
         FileInfo fInfo = new FileInfo(FileName);
 
-        // You can throw a personalized exception if
-        // the file does not exist.
         if (!fInfo.Exists)
             return false;
-
-        //{
-        //    throw new FileNotFoundException("The file was not found.", FileName);
-        //}
         return true;
 
 
