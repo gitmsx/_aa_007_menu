@@ -1248,8 +1248,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textOut: {fileID: 1218289475}
-  SpeedText: 0.01
-  SpeedText2: 0.09
+  SpeedText: 0.001
+  SpeedText2: 0
   str:
   - 
   - 
