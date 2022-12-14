@@ -80,12 +80,13 @@ public class TextTmpOutTerminal103: MonoBehaviour
 
         for (int i = 0; i < QueueAllStrings | i <= ShowTipedStrings; i++)
 
-            CourutineWork = StartCoroutine(printtext22(i, str[i]));
+            CourutineWork = StartCoroutine(OutText1(i, str[i]));
 
 
-        
-            if (QueueAllStrings > ShowTipedStrings)
-            StartCoroutine(printline());
+
+      // if (QueueAllStrings > ShowTipedStrings)
+        //    ;
+       //     StartCoroutine(printline());
 
 
         // CourutineWork = StartCoroutine(printline());
@@ -102,7 +103,7 @@ public class TextTmpOutTerminal103: MonoBehaviour
 
 
 
-    IEnumerator printtext22(int i, string strT)
+    IEnumerator OutText1(int i, string strT)
     {
 
 
@@ -139,15 +140,15 @@ public class TextTmpOutTerminal103: MonoBehaviour
 
 
 
-    IEnumerator printline()
+    IEnumerator Outtextline2()
     {
 
         while ((CurrentElementQueueAllStrings <= ShowTipedStrings))
         {
-            print("CurrentElementQueueAllStrings " + CurrentElementQueueAllStrings.ToString());
+          //  print("CurrentElementQueueAllStrings " + CurrentElementQueueAllStrings.ToString());
             yield return new WaitForSeconds(0.7f);
         }
-            print("####     CurrentElementQueueAllStrings " + CurrentElementQueueAllStrings.ToString());
+          //  print("####     CurrentElementQueueAllStrings " + CurrentElementQueueAllStrings.ToString());
             for (int i = ShowTipedStrings; i < str.Length; i++)
         {
             textOut.text += str[i];
